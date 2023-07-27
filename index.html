@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body onload="loadIntialCardData()">
 
 
 
@@ -29,11 +29,30 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              Type Here
+                <div class="mb-3 ">
+                    <label for="imageurl" class="form-label">Image Url</label>
+                    <input type="url" class="form-control" id="imageurl" aria-describedby="Image Url" placeholder="http://example.com/xyz.png">
+                 
+                  </div>
+                  <div class="mb-3">
+                    <label for="tasktitle" class="form-label">Task Title</label>
+                    <input type="text" class="form-control" id="tasktitle" aria-describedby="Task Title" placeholder="Enter Task Title">
+                 
+                  </div>
+                  <div class="mb-3">
+                    <label for="tasktype" class="form-label">Task Type</label>
+                    <input type="text" class="form-control" id="tasktype" aria-describedby="Task Type" placeholder="Enter Task Type">
+                 
+                  </div>
+                  <div class="mb-3">
+                    <label for="taskdescription" class="form-label">Task Description</label>
+                    <textarea rows="6" type="text" class="form-control" id="taskdescription" aria-describedby="Task Description" placeholder="Enter Description"></textarea>
+                 
+                  </div>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
+              <button type="button" class="btn btn-primary" onclick="saveChanges()" data-bs-dismiss="modal">Save changes</button>
             </div>
           </div>
         </div>
@@ -95,7 +114,7 @@
 
             </div>
         </div>
-        <div class="row">
+        <div class="row task__container">
             <div class="col-sm-12 col-md-6 col-lg-4">
                 <div class="card ">
                     <h5 class="card-header d-flex justify-content-end gap-2"><button type="button"
@@ -113,42 +132,10 @@
                 </div>
 
             </div>
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <div class="card ">
-                    <h5 class="card-header d-flex justify-content-end gap-2"><button type="button"
-                            class="btn btn-outline-success"><i class="fa-solid fa-pen-to-square"></i></button>
-                        <button type="button" class="btn btn-outline-danger"><i class="fa-solid fa-trash"></i></button>
-                    </h5>
-                    <div class="card-body">
-                        <img
-                                src="https://plus.unsplash.com/premium_photo-1661758860702-617d1a066ce0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dGFzayUyMGltYWdlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
-                                class="card-img-top" alt="..." >
-                        <h5 class="card-title mt-3 fw-bold text-primary"> Title</h5>
-                        <p class="card-text">Strive for progress Not perfection.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <div class="card ">
-                    <h5 class="card-header d-flex justify-content-end gap-2"><button type="button"
-                            class="btn btn-outline-success"><i class="fa-solid fa-pen-to-square"></i></button>
-                        <button type="button" class="btn btn-outline-danger"><i class="fa-solid fa-trash"></i></button>
-                    </h5>
-                    <div class="card-body">
-                        <img
-                                src="https://plus.unsplash.com/premium_photo-1661546694858-400fd0762b3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHRhc2slMjBpbWFnZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
-                                class="card-img-top" alt="..." >
-                        <h5 class="card-title mt-3 fw-bold text-primary"> Title</h5>
-                        <p class="card-text">Perfection not perfection.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-
-            </div>
+            
         </div>
     </div>
+    <script src="myjs.js"></script>
 
 </body>
 
